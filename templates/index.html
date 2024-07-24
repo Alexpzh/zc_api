@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Сайт с прогнозом погоды в любой точке мира</title>
+    <title>Сайт с цитатами</title>
 </head>
 <body>
 
-<h1>Сайт с прогнозом погоды в любой точке мира</h1>
+<h1>Сайт с цитатами</h1>
 
-    <form method="post">
+<!--    <form method="post">
         <input type="text" name="city" placeholder="Введите город:" required>
         <button type="submit">Узнать погоду</button>
    </form>
 
-   <div class="result">
+   <div class="wheather">
        {% if weather %}
            <h3>Погода в {{ weather['name'] }}</h3>
            <p>Температура: {{ weather['main']['temp'] }}°C</p>
            <p>Погода: {{ weather['weather'][0]['description'] }}</p>
        {% endif %}
    </div>
-
-   <div class="result">
+-->
+   <div class="quote">
        {% if quote %}
            <h3>{{ quote['author'] }}</h3>
            <p>{{ quote['content'] }}</p>
        {% endif %}
    </div>
-
-   <div class="result">
+<!--
+   <div class="news">
     {% if news %}
            <h2>Новости:</h2>
            <ul>
@@ -38,6 +38,6 @@
            </ul>
     {% endif %}
    </div>
-
+-->
 </body>
 </html>
