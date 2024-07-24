@@ -2,42 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт с цитатами</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .quote {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h3 {
+            color: #f0f0f0;
+        }
+        a {
+            color: #1e90ff;
+        }
+        a:hover {
+            color: #ff4500;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Сайт с цитатами</h1>
+<div class="container">
+    <h1 class="text-center">Сайт с цитатами</h1>
 
-<!--    <form method="post">
-        <input type="text" name="city" placeholder="Введите город:" required>
-        <button type="submit">Узнать погоду</button>
-   </form>
+    <!-- Пример формы для погоды (закомментировано) -->
+    <!--
+    <form method="post" class="form-inline justify-content-center my-4">
+        <input type="text" name="city" class="form-control mr-2" placeholder="Введите город:" required>
+        <button type="submit" class="btn btn-primary">Узнать погоду</button>
+    </form>
 
-   <div class="wheather">
+    <div class="weather text-center">
        {% if weather %}
            <h3>Погода в {{ weather['name'] }}</h3>
            <p>Температура: {{ weather['main']['temp'] }}°C</p>
            <p>Погода: {{ weather['weather'][0]['description'] }}</p>
        {% endif %}
-   </div>
--->
-   <div class="quote">
+    </div>
+    -->
+
+    <div class="quote text-center mt-5">
        {% if quote %}
            <h3>{{ quote['author'] }}</h3>
            <p>{{ quote['content'] }}</p>
        {% endif %}
-   </div>
-<!--
-   <div class="news">
-    {% if news %}
+    </div>
+
+    <!-- Пример для новостей (закомментировано) -->
+    <!--
+    <div class="news mt-5">
+        {% if news %}
            <h2>Новости:</h2>
-           <ul>
+           <ul class="list-unstyled">
                {% for article in news %}
                    <li><a href="{{ article['url'] }}"> {{ article['title'] }} </a></li>
                {% endfor %}
            </ul>
-    {% endif %}
+        {% endif %}
    </div>
--->
+   -->
+</div>
+
+<!-- Подключение Bootstrap JS и зависимостей -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
